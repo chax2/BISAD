@@ -1,9 +1,14 @@
-*{
+body{
     background-color: #ffe0dcff;
 }
 
 .headName{
-    background-color: #fec8c1ff;
     font-family: 'Caveat Brush', cursive;
     text-align: center;
+    color: #61342d;
+}
+
+.novelName{
+    font-family: 'Mali', cursive;
+    color: #61342d;
 }

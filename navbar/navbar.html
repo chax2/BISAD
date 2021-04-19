@@ -1,0 +1,319 @@
+<style>
+    body {
+        font-family: 'readery_slab_loop';
+    }
+
+    .nav-link,
+    .nav-link:hover {
+        color: white;
+        font-family: 'readery_slab_bold';
+    }
+
+    .form-control,
+    .form-control:focus {
+        height: calc(1.5rem + .7rem + 2px);
+        border-radius: 0rem;
+        color: #000;
+        border: 1px solid #000;
+        border-color: #000;
+        outline: 0;
+        box-shadow: 0 0 0 0
+    }
+
+    a #toggle:active {
+        color: grey;
+    }
+
+    .collapsing {
+        transition: height .8s ease, padding-top .8s ease;
+        padding-top: 0.8em;
+    }
+
+    .collapse {
+        transition: height .8s ease, padding-top .8s ease;
+        padding-top: 1.5em;
+    }
+
+    .collapse-menu {
+        transition: none;
+    }
+
+    .tag-label {
+        font-family: 'readery_slab_bold';
+        border: 2px solid black;
+        padding: 3px 8px;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        display: inline-block;
+        font-size: 1em;
+        color: black;
+    }
+
+    .tag-label:hover {
+        color: white;
+        background-color: black;
+    }
+
+    a,
+    a:active,
+    a:hover {
+        text-decoration: none;
+    }
+
+    .block {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 40px;
+        height: 4px;
+        background-color: #333;
+        margin: 6px 0;
+        border-radius: 50px;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-9px, -8px);
+        transform: rotate(45deg) translate(-9px, -8px);
+    }
+
+    .h5-title {
+        font-family: 'readery_slab_bold';
+        font-size: 1.1em;
+    }
+
+    #categories {
+        font-family: 'readery_slab_loop';
+        font-size: 1em;
+        color: black;
+    }
+
+    #categories:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+
+    <!-- Navbar Black (main) -->
+    <nav class="navbar navbar-expand-lg text-white d-flex justify-content-center" style="background-color: black;"
+        id="navigation">
+        <div class="container p-0">
+
+            <!-- Logo Readery -->
+            <a class="navbar-brand mr-5 mt-3 mb-3" href="#"><img src="images/favicons/logo-white.svg" width="172"></a>
+            <!-- Toggle Hamburger in navbar black -->
+            <a class="navbar-toggler toggler-example text-white" data-toggle="collapse"
+                data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+                aria-label="Toggle navigation" href="#" id="toggle"><i class="fa fa-bars"></i></a>
+
+            <!-- collapse in navbar (คลาส collapse ไว้รวมเมนูต่างๆ ให้อยู่ใน hamburger เวลาที่ถูกย่อจอ) -->
+            <div class="collapse navbar-collapse m-auto collapse-menu" id="navbarSupportedContent1">
+                <!-- แถบ search -->
+                <ul class="navbar-nav mr-auto mb-3">
+                    <div class="form-search nav-item" id="search">
+                        <input class="form-control" type="search" aria-label="Search">
+                        <button type="submit" title="ค้นหา" class="button nav-item nav-link"><i
+                                class="icon-search"></i></button>
+                    </div>
+                </ul>
+                <!-- เมนูริมขวา -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item mr-3 mb-3"><a class="nav-link text-white" href="pages/payment.php"
+                            id="link1">แจ้งโอนเงิน</a></li>
+                    <li class="nav-item mr-3 mb-3"><a class="nav-link text-white" href="pages/how-to-pay.php"
+                            id="link2">วิธีชำระเงิน</a></li>
+                    <li class="nav-item mr-3 mb-3"><a class="nav-link text-white" href="pages/shipping.php"
+                            id="link3">การจัดส่ง</a></li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link cart" href="#"><i class="icon-cart"></i><span class="item-count">0</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar Black (main) -->
+
+    <!-- Navbar (แถบล่าง main) -->
+    <nav class="navbar navbar-light d-flex justify-content-center" style="background-color: white;">
+        <div class="container">
+            <div class="row pb-2">
+                <ul class="nav mr-auto" style="padding-top: 2px;">
+                    <!-- Hamburger button -->
+                    <li class="nav-item">
+                        <div class="block mr-3 mt-3" onclick="myFunction(this)" data-toggle="collapse"
+                            href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                        <script>
+                            function myFunction(x) {
+                                x.classList.toggle("change");
+                            }
+                        </script>
+                    </li>
+                    <!-- แถบข้างๆ Hamburger -->
+                    <li class="nav-item">
+                        <a class="tag-label mt-3 mr-3" href="#">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="tag-label mt-3 mr-3" href="#">Best Sellers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="tag-label mt-3 mr-3" href="#">Readery Podcast</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="tag-label mt-3 mr-3" href="#">ความน่าจะอ่าน 2020</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="tag-label mt-3 mr-3" href="#">SALE</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar (แถบล่าง main) -->
+
+    <hr style="border-top: 1px solid#f0f0f0; margin: 0;">
+
+    <!-- list หมวดหนังสือ เมื่อกด Hamburger button -->
+    <div class="collapse collapsing" id="collapseExample" style="background-color: #f0f0f0;">
+        <div class="d-flex justify-content-center">
+            <div class="container">
+                <div class="row m-1 mb-4">
+                    <!-- Column 1 -->
+                    <div class="col-6 col-md-3">
+                        <h5 class="h5-title mb-3">Fiction</h5>
+                        <a href="pages/catagories-classic.php" id="categories">Classic</a><br>
+                        <a href="pages/catagories-modern.php" id="categories">Modern & Contemporary</a><br><br>
+
+                        <!---->
+                        <a href="#" id="categories">เรื่องสั้นแปล</a><br>
+                        <a href="##" id="categories">บทกวีแปล</a><br>
+                        <a href="#" id="categories">นิยายดราม่า-ชีวิต</a><br>
+                        <a href="#" id="categories">นิยายรัก</a><br>
+                        <a href="#" id="categories">นิยายโรมานซ์</a><br>
+                        <a href="#" id="categories">นิยายฆาตกรรม/สืบสวน</a><br>
+                        <a href="#" id="categories">นิยายผีสยองขวัญ</a><br>
+                        <a href="#" id="categories">นิยายวิทยาศาสตร์-ไซไฟ</a><br>
+                        <a href="#" id="categories">นิยายผจญภัย/แฟนตาซี</a><br>
+                        <a href="#" id="categories">นิยายอิงประวัติศาสตร์</a><br>
+                        <a href="#" id="categories">วรรณกรรมเยาวชนแปล</a><br><br>
+
+                        <!---->
+                        <a href="#" id="categories">จีนโรมานซ์</a><br>
+                        <a href="#" id="categories">จีนกำลังภายใน</a><br>
+                        <a href="#" id="categories">จีนอิงประวัติศาสตร์</a><br>
+                        <a href="#" id="categories">จีนผจญภัยแฟนตาซี</a><br>
+                        <a href="#" id="categories">จีนร่วมสมัย</a><br>
+                        <a href="#" id="categories">สามก๊ก และอื่นๆ</a><br><br>
+
+                        <!---->
+                        <a href="pages/catagories-japanese-literature.php" id="categories">วรรณกรรมญี่ปุ่น</a><br>
+                        <a href="#" id="categories">วรรณกรรมเกาหลี</a><br>
+                        <a href="#" id="categories">วรรณกรรมจีน</a><br>
+                        <a href="#" id="categories">วรรณกรรมอเมริกัน</a><br>
+                        <a href="#" id="categories">วรรณกรรมอังกฤษ</a><br>
+                        <a href="#" id="categories">วรรณกรรมฝรั่งเศส</a><br>
+                        <a href="#" id="categories">วรรณกรรมเยอรมัน</a><br>
+                        <a href="#" id="categories">วรรณกรรมอิตาลี</a><br>
+                        <a href="#" id="categories">วรรณกรรมรัสเซีย</a><br>
+                        <a href="#" id="categories">วรรณกรรมอเมริกาใต้</a><br><br>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col-6 col-md-3">
+                        <h5 class="h5-title mb-3">Thai Fiction</h5>
+
+                        <!---->
+                        <a href="pages/catagories-thai-short-story.php" id="categories">เรื่องสั้นไทย</a><br>
+                        <a href="pages/catagories-poetry.php" id="categories">บทกวีไทย</a><br>
+                        <a href="#" id="categories">วรรณกรรมไทย</a><br>
+                        <a href="#" id="categories">ไทยคลาสสิค</a><br>
+                        <a href="#" id="categories">ไทยดราม่า-ชีวิต</a><br>
+                        <a href="#" id="categories">ไทยฆาตกรรม-สืบสวน</a><br>
+                        <a href="#" id="categories">ไทยอิงประวัติศาสตร์</a><br>
+                        <a href="#" id="categories">นิยายรักผู้ใหญ่</a><br>
+                        <a href="#" id="categories">นิยายรักวัยรุ่น</a><br>
+                        <a href="#" id="categories">วรรณกรรมเยาวชนไทย</a><br>
+                        <a href="#" id="categories">วรรณคดีไทย</a><br><br>
+
+                        <h5 class="h5-title mb-3">อื่นๆ</h5>
+                        <!---->
+                        <a href="pages/catagories-y-fiction.php" id="categories">นิยายวาย</a><br>
+                        <a href="pages/catagories-yuri-fiction.php" id="categories">นิยายยูริ</a><br>
+                        <a href="#" id="categories">Light Novel</a><br>
+                        <a href="#" id="categories">มังงะ</a><br>
+                        <a href="#" id="categories">Graphic Novel</a><br>
+                        <a href="#" id="categories">Young Adult</a><br>
+                        <a href="#" id="categories">Book-to-Screen</a><br>
+                        <a href="#" id="categories">Based-on-True-Story</a><br>
+                        <a href="#" id="categories">นิยายสงคราม</a><br>
+                        <a href="#" id="categories">Box Set</a><br>
+                        <a href="#" id="categories">Hardcover</a><br><br>
+
+                        <h5 class="h5-title mb-3">สินค้าอื่นๆ</h5>
+                        <!---->
+                        <a href="#" id="categories">Dear Reader</a><br>
+                        <a href="#" id="categories">Tote</a><br>
+                        <a href="#" id="categories">Mug</a><br>
+                        <a href="#" id="categories">DVD</a><br>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="col-6 col-md-3">
+                        <h5 class="h5-title mb-3">Non-Fiction</h5>
+                        <!---->
+                        <a href="pages/catagories-memoir.php" id="categories">Memoir & Documentary</a><br>
+                        <a href="pages/catagories-essay.php" id="categories">ความเรียง/บันทึกประสบการณ์</a><br>
+                        <a href="#" id="categories">Comic Essay</a><br>
+                        <a href="#" id="categories">คำคม/Quote</a><br>
+                        <a href="#" id="categories">วิจารณ์วรรณกรรม</a><br>
+                        <a href="#" id="categories">Pop-Sci/Brainy Books</a><br>
+                        <a href="#" id="categories">Book-to-Screen</a><br>
+                        <a href="#" id="categories">จิตวิทยา</a><br>
+                        <a href="#" id="categories">Spiritual How-To</a><br>
+                        <a href="#" id="categories">ท่องเที่ยว</a><br>
+                        <a href="#" id="categories">ธุรกิจ</a><br>
+                        <a href="#" id="categories">เศรษฐศาสตร์</a><br>
+                        <a href="#" id="categories">ประวัติศาสตร์โลก</a><br>
+                        <a href="#" id="categories">ประวัติศาสตร์ไทย</a><br>
+                        <a href="#" id="categories">ชีวประวัติ/บทสัมภาษณ์</a><br><br>
+                    </div>
+
+                    <!-- Column 4 -->
+                    <div class="col-6 col-md-3">
+                        <a href="#" id="categories">ศิลปวัฒนธรรม</a><br>
+                        <a href="#" id="categories">ศาสนา/ปรัชญา</a><br>
+                        <a href="#" id="categories">สงคราม</a><br>
+                        <a href="#" id="categories">สังคม</a><br>
+                        <a href="#" id="categories">การเมือง</a><br>
+                        <a href="#" id="categories">วิทยาศาสตร์/สิ่งแวดล้อม</a><br>
+                        <a href="#" id="categories">คอมพิวเตอร์/อินเทอร์เน็ต</a><br>
+                        <a href="#" id="categories">สุขภาพ</a><br>
+                        <a href="#" id="categories">ครอบครัว แม่และเด็ก</a><br>
+                        <a href="#" id="categories">อาหาร/เครื่องดื่ม</a><br>
+                        <a href="#" id="categories">จัดบ้าน/แต่งสวน</a><br>
+                        <a href="#" id="categories">Lifestyle/งานอดิเรก</a><br>
+                        <a href="#" id="categories">ศิลปะ/ภาพยนตร์/ดนตรี</a><br>
+                        <a href="#" id="categories">กีฬา</a><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- list หมวดหนังสือ เมื่อกด Hamburger button -->

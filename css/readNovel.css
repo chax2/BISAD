@@ -1,0 +1,21 @@
+body{
+    background-color: #ffe0dcff;
+}
+
+.headName{
+    font-family: 'Caveat Brush', cursive;
+    text-align: center;
+    color: #61342d;
+}
+
+section {
+  height: 100px;
+ background-color: #fec8c1ff;
+ padding-top: 30px;
+}
+
+
+.novelName{
+    font-family: 'Mali', cursive;
+    color: #61342d;
+}

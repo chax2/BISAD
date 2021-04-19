@@ -1,0 +1,83 @@
+body{
+    background-color: #ffe0dcff;
+}
+
+.headName{
+    font-family: 'Caveat Brush', cursive;
+    text-align: center;
+    color: #61342d;
+}
+
+section {
+  height: 100px;
+ background-color: #fec8c1ff;
+ padding-top: 30px;
+}
+
+
+.novelName{
+    font-family: 'Mali', cursive;
+    color: #61342d;
+}
+
+.block{
+    width: 150px;
+  height: auto;
+  font-weight: bold;
+   border: none;
+    border-radius: 10px;
+    background: #ffe8c9ff;
+    box-shadow:
+        0px 0px 0px 5px rgba(255, 255, 255, 0.4),
+        0px 4px 20px rgba(0, 0, 0, 0.33);
+    margin-top: 15vh;
+     display: flex;
+  justify-content: center;
+}
+
+label{
+    margin-top: 10px;
+}
+
+input[type=text]  {
+        display: flex;
+        align-items: center;
+        width: 250px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        background:lightgrey;
+    }
+
+#submit {
+        width: 200px;
+        height: 60px;
+        background: #ffe8c9ff;
+        font-family: inherit;
+        font-weight: bold;
+        color: inherit;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        box-shadow:
+            0px 0px 0px 5px rgba(255, 255, 255, 0.4),
+            0px 4px 20px rgba(0, 0, 0, 0.33)
+
+    }
+
+a {
+    color: black;
+    text-decoration: underline;
+    margin-left: 40px;
+}
+
+a:hover {
+    color: gray;
+    background-color: transparent;
+}
+
+#backet{
+    margin-left: 20px;
+    margin-top: 20px;}
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>อ่านนิยาย</title>
+    <link rel="stylesheet" href="css/readNovel.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
+</head>
+<style>
+    .input {
+        display: flex;
+        align-items: center;
+        width: 350px;
+        height: 60px;
+        border: none;
+        border-radius: 5px;
+        background: #ffe8c9ff;
+    }
+
+    #submit {
+        width: 200px;
+        height: 50px;
+        background: #ffe8c9ff;
+        font-family: inherit;
+        font-weight: bold;
+        color: inherit;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+
+    }
+
+    .button,
+    .input {
+        box-shadow:
+            0px 0px 0px 5px rgba(255, 255, 255, 0.4),
+            0px 4px 20px rgba(0, 0, 0, 0.33);
+    }
+
+    #select {
+        width: 100px;
+        height: 60px;
+
+    }
+
+    .date {
+        background: #ffe8c9ff;
+    }
+
+    a {
+        color: gray;
+        text-decoration: underline;
+    }
+
+    a:hover {
+        color: #92B1C5;
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <!-- ชื่อเว็บhead -->
+    <section>
+        <span class="headName">
+            <h1> NOVEL WEB UFA1988</h1>
+        </span>
+    </section>
+    <div class="row no-gutters">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="row no-gutters pt-5 pl-5 pr-5 pb-3 justify-content-center">
+                <form action="" id="form">
+                    <div class="row no-gutters pb-3 justify-content-center">
+                        <div class="header">
+                            <h1>เข้าสู่ระบบ</h1>
+                        </div>
+                    </div>
+                    <!-- กรอก Username -->
+                    <div class="row no-gutters pt-4 pb-4 justify-content-center">
+                        <div class="input">
+                            <input type="text" class="input" id="Username" name="Username" placeholder="  กรอกUsername">
+                        </div>
+                    </div>
+                    <!-- กรอก Password -->
+                    <div class="row no-gutters pt-4 pb-4 justify-content-center">
+                        <div class="input">
+                            <input type="text" class="input" id="Password" name="Password" placeholder="  กรอกPassword">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="row no-gutters pt-5 pl-5 pr-5 pb-3 justify-content-center">
+                <!-- ปุ่มสมัครสมาชิก -->
+                <div class="col-md-5 justify-content-center">
+                    <input type="button" onclick="window.location='สมัครสมาชิก.html'" class="button" id="submit"
+                        value="สมัครสมาชิก">
+                </div>
+                <div class="col-md-2"></div>
+                <!-- ปุ่มเข้าสู่ระบบ -->
+                <div class="col-md-5 justify-content-center">
+                    <input type="button" onclick="window.location='#'" class="button" id="submit" value="เข้าสู่ระบบ">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row no-gutters pt-4 pb-4 justify-content-center">
+        <p><a href="">ลืมรหัสผ่าน</a></p>
+    </div>
+</body>

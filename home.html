@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <title>Navbar</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/6aa23f2381.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        body{
+            background-color: #fffaf6ff;
+        }
+
+        .headName{
+            font-family: 'Caveat Brush', cursive;
+            color: #61342d;
+            justify-content: center;
+            font-size: 2.3rem;
+        }
+
+        .name{
+            font-family: 'Mali', cursive;
+            color: #61342d;
+            text-align: right;
+        }
+
+        .aname{
+            font-family: 'Mali', cursive;
+            color: #61342d;
+            text-align: left;
+        }
+
+        .bname{
+            font-family: 'Mali', cursive;
+            color: #000000;
+            text-align: right;
+        }
+
+        .cname{
+            font-family: 'Mali', cursive;
+            color: #000000;
+            text-align: center;
+        }
+
+        .normalText{
+            font-family: 'Mali', cursive;
+            color: #000000;
+        }
+
+        .line{
+            display: inline-block;
+        }
+
+        .card-img{
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
+        }
+    </style>
+
+    <body>
+        <!-- ชื่อเว็บhead -->
+        <nav class="navbar" style="background-color: #fec8c1ff;">
+            <div class="container-fluid">
+                <a class="navbar-brand headName" href="#">
+                        <img src="https://pngimage.net/wp-content/uploads/2018/06/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B8%AD-png-3.png" width="60" height="60" alt="logo">
+                        NOVEL WEB</a>
+                <a class="name" href="#" >ออกจากระบบ</a>
+            </div>
+            
+            <div class="container-fluid pt-2" style="background-color: #ffdcd8ff;">
+                <div class="col-lg-3.5 pt-1">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input class="form-control aname" type="search" placeholder="ค้นหานิยาย" aria-label="ค้นหานิยาย">&nbsp;
+                            <button class="btn btn-outline-secondary my-2 my-sm-0 name" type="submit"><i class="fas fa-search">ค้นหา</i></button>      
+                        </div>
+                    </form>
+                    <div class="pt-2"></div>
+                </div>
+                <div class="col-lg-3.5 pt-1">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input class="form-control aname" type="search" placeholder="ค้นหาชื่อผู้แต่ง" aria-label="ค้นหาชื่อผู้แต่ง">&nbsp;
+                            <button class="btn btn-outline-secondary my-2 my-sm-0 name" type="submit"><i class="fas fa-search">ค้นหา</i></button>                       
+                        </div>
+                    </form>
+                    <div class="pt-2"></div>
+                </div>
+                
+                    <div class="col-lg-1">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle name" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                หมวดหมู่นิยาย
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color:#fff2ccff ;">
+                                <a class="dropdown-item name" href="#">อบอุ่นหัวใจ</a>
+                                <a class="dropdown-item name" href="#">ดราม่า</a>
+                                <a class="dropdown-item name" href="#">แฟนตาซี</a>
+                                <a class="dropdown-item name" href="#">สยองขวัญ</a>
+                                <a class="dropdown-item name" href="#">สืบสวน/สอบสวน</a>
+                                <a class="dropdown-item name" href="#">ย้อนยุค</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <ul class="nav">
+                            <li class="nav-item">
+                              <a class="nav-link name" href="#">จัดการนิยาย</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link name" href="#">หมุดของฉัน</a>
+                            </li>
+                        </ul>
+                    </div>
+            <br>
+            <br>
+            </div>
+            <br>
+        </nav>
+
+        <!--โซนbody-->
+        <div class="container-fluid pt-3">
+            <div class="row">
+                <div class="col-8">
+                    <h4 class="normalText"><b>นิยายแนะนำ</b></h4>
+                    <div class="card border-secondary bg-white normalText">
+                        <div class="card-body pt-3">
+                            <div class="row">
+                                <div class="col-5">
+                                    <h5 class="card-title"><b>ชื่อเรื่อง</b></h5>
+                                    <p class="card-text">1.</p>
+                                    <p class="card-text">2.</p>
+                                    <p class="card-text">3.</p>
+                                    <p class="card-text">4.</p>
+                                    <p class="card-text">5.</p>
+                                </div>
+                                <div class="col-2">
+                                    <h5 class="card-title"><b>ชื่อผู้เเต่ง</b></h5>
+                                    <p class="card-text">1.</p>
+                                    <p class="card-text">2.</p>
+                                    <p class="card-text">3.</p>
+                                    <p class="card-text">4.</p>
+                                    <p class="card-text">5.</p>
+                                </div>
+                                <div class="col-2">
+                                    <h5 class="card-title"><b>จำนวนตอน</b></h5>
+                                    <p class="card-text cname">ตอน</p>
+                                    <p class="card-text cname">ตอน</p>
+                                    <p class="card-text cname">ตอน</p>
+                                    <p class="card-text cname">ตอน</p>
+                                    <p class="card-text cname">ตอน</p>
+                                </div>
+                                <div class="col-2">
+                                    <h5 class="card-title bname"><b>ผู้เข้าชม</b></h5>
+                                    <p class="card-text bname">1111.</p>
+                                    <p class="card-text bname">212.</p>
+                                    <p class="card-text bname">32.</p>
+                                    <p class="card-text bname">4.</p>
+                                    <p class="card-text bname">55555.</p>
+                                </div>
+                                <div class="col-1">
+                                    <h5 class="card-title"></h5><br>
+                                    <p><i class="fas fa-eye"></i></p>
+                                    <p><i class="fas fa-eye"></i></p>
+                                    <p><i class="fas fa-eye"></i></p>
+                                    <p><i class="fas fa-eye"></i></p>
+                                    <p><i class="fas fa-eye"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h4 class="normalText" style="text-align: center;"><b>นิยายขายดี</b></h4>
+                    <div class="card border-secondary bg-white normalText">
+                        <div class="card-body">
+                            <h5 class="card-title normalText" style="text-align: center;"><b>ขายดีอันดับ1</b></h5>
+                            <h5 class="card-title aname" style="text-align: center;"><b>ชื่อเรื่อง</b></h5>
+                            <div class="row">
+                                <div class="col-9">
+                                    <h6 class="card-subtitle mb-2 text-muted normalText"><u>โดย</u></h6>
+                                </div>
+                                <div class="col-3">
+                                    <mark class="bg-danger"><h6 class="card-text mb-2 normalText line"><b>112</b></h6>
+                                    <h6 class="card-text mb-2 normalText line">บาท</h6></mark>
+                                </div>
+                            </div>
+                            <div>
+                                <img class="card-img rounded mx-auto d-block" src="https://inwfile.com/s-co/_webp_max_images/4096/4096/9x/rz/5g.webp" alt="Card image cap" >
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

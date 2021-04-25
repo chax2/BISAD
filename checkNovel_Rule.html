@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <title>Navbar</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet"> 
+    </head>
+    <style>
+        body{
+            background-color: #ffe0dcff;
+            
+        }
+
+        .headName{
+            font-family: 'Caveat Brush', cursive;
+            color: #61342d;
+            justify-content: center;
+            font-size: 2.3rem;
+        }
+
+        .name{
+            font-family: 'Mali', cursive;
+            color: #61342d;
+            text-align: right;
+        }
+
+        .aname{
+            font-family: 'Mali', cursive;
+            color: #61342d;
+            text-align: left;
+        }
+
+        .bname{
+            font-family: 'Mali', cursive;
+            color: #000000;
+            text-align: right;
+        }
+
+        .cname{
+            font-family: 'Mali', cursive;
+            color: #000000;
+            text-align: center;
+        }
+
+        .normalText{
+            font-family: 'Mali', cursive;
+            color: #000000;
+        }
+
+        .line{
+            background-color: #ccccccff;
+            border : 5px;
+            font-family: 'Mali', cursive;
+            color: #61342d;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border: 4px solid rgb(255, 255, 255);;
+            padding: 50px;
+            margin: 20px;
+            background-color: #ffe8c9ff;
+            border-radius: 25px;
+            
+        }
+    </style>
+
+    <body>
+        <!-- ชื่อเว็บhead -->
+        <nav class="navbar" style="background-color: #fec8c1ff;">
+            <a class="navbar-brand headName" href="#">
+                <img src="https://pngimage.net/wp-content/uploads/2018/06/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B8%AD-png-3.png" width="60" height="60" alt="logo">
+                NOVEL WEB</a>
+            <a class="name" href="#" >ออกจากระบบ</a>
+        </nav>
+        <div class="container pt-5">
+            <div class="box">
+                <div class="card-body">
+                    <h5 class="card-text aname"><b>นิยาย : </b></h5>
+                    <h6 class="card-text aname">จำนวนตอน : </h6>
+                    <hr style="width: 100%; color: lightgray; height: 0.5px; background-color:lightgray;" >
+                    <h6 class="card-text cname"><b>เนื้อหาของนิยายเรื่องนี้</b></h6>
+                    <br>
+                    <p class="card-text cname">เนื้อหา</p>
+                </div>
+            </div>
+
+                <center>
+                    <button type="button" class="btn btn-outline-light btn-lg line"><b>อนุมัติ</b></button>
+                    <button type="button" class="btn btn-outline-light btn-lg line"><b>ไม่อนุมัติ</b></button>
+                </center>
+            </div>   
+        </div>
+    </body>
+</html>

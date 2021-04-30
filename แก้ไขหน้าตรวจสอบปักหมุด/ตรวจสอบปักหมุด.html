@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>ปักหมุดของฉัน</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
+</head>
+<style>
+    .boxwhite {
+        margin-left: 150px;
+        padding: 10px 30px;
+    }
+
+    #boxwhite {
+        background-color: #ffe0dcff;
+    }
+
+    .BGround {
+        width: fit-content;
+        height: fit-content;
+        padding: 10px 20px;
+        background-color: #f7e1ecff;
+        margin-top: 30px;
+        margin-left: 150px;
+    }
+
+    #drop-down {
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+
+    body {
+        font-family: 'Mali', cursive;
+    }
+
+    .headName {
+        font-family: 'Caveat Brush', cursive;
+        color: #61342d;
+        justify-content: center;
+        font-size: 2.3rem;
+    }
+
+    .name {
+        font-family: 'Mali', cursive;
+        color: #61342d;
+        text-align: right;
+    }
+
+    .aname {
+        font-family: 'Mali', cursive;
+        color: #61342d;
+        text-align: left;
+    }
+
+    .bname {
+        font-family: 'Mali', cursive;
+        color: #000000;
+        text-align: right;
+    }
+
+    .cname {
+        font-family: 'Mali', cursive;
+        color: #000000;
+        text-align: center;
+    }
+
+    .normalText {
+        font-family: 'Mali', cursive;
+        color: #000000;
+    }
+
+    .line {
+        display: inline-block;
+    }
+
+    .card-img {
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    .button {
+        background-color: #ffe8c9ff;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 15px;
+    }
+
+    a {
+        color: #000000;
+    }
+
+    a:hover {
+        color: gray;
+        background-color: transparent;
+    }
+</style>
+
+<body style="background-color: #fffaf6ff;">
+    <nav class="navbar" style="background-color: #fec8c1ff;">
+        <div class="container-fluid">
+            <a class="navbar-brand headName" href="/books/home">
+                <img src="https://pngimage.net/wp-content/uploads/2018/06/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B8%AD-png-3.png"
+                    width="60" height="60" alt="logo">
+                NOVEL WEB</a>
+            <a class="name" href="/books">ออกจากระบบ</a>
+        </div>
+    </nav>
+    <!--แถบเมนู-->
+    <div class="row no-gutters" id='boxwhite'>
+        <div class="col-md-8 pt-3">
+            <h4 class="boxwhite"><B>ตรวจสอบปักหมุดของฉัน</B></h4>
+        </div>
+        <div class="col-md-4 pt-3 pb-3">
+            <div style="width: 250px; height: 60px; background-color: #fef3e8ff; float: right; margin-right: 50px;">
+                <h4 style="margin-left: 20px; margin-top: 20px;">ทั้งหมด......ปักหมุด</h4>
+            </div>
+        </div>
+    </div>
+
+    <!--เนื้อหาปักหมุด รอแก้ไขเชื่อมดาต้า-->
+    <div class="row no-gutters">
+        <% for(var i=0; i< data.length; i++) { %>
+            <div class="col-md-5">
+                <div class="BGround">
+                    <img src="https://cdn.icon-icons.com/icons2/317/PNG/512/pin-icon_34381.png" width="60" height="60"
+                        alt="logo" style="margin-top:-50px; margin-left: 445px;">
+                    <h5>ชื่อนิยาย <%= data[i].name %>
+                    </h5>
+                    <h6 style=" margin-top: 10px; margin-bottom: 20px;">จำนวนที่ถูกปักหมุด <%= data[i].num %> ครั้ง
+                    </h6>
+                </div>
+            </div>
+
+            <% } %>
+
+    </div>
+
+    <div class="row no-gutters justify-content-center pt-5 pb-2">
+        <a href="../books/home" class="button">กลับหน้าอ่านนิยาย</a>
+    </div>
+
+</body>
+
+</html>

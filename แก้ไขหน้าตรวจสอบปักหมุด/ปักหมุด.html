@@ -132,19 +132,18 @@
 
     <!--แถบเมนู-->
     <div class="row no-gutters" id='boxwhite'>
-        <div class="col-md-8 pt-3">
+        <div class="col-md-7 pt-3">
             <h4 class="boxwhite"><B>ปักหมุดของฉัน <%= data.length %> ปักหมุด</B></h4>
         </div>
-        <div class="col-md-4 pt-3">
-            <div class="btn-group">
-                <button type="button" class="btn dropdown-toggle name" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false" id='drop-down'>
-                    <h4><b>จัดการปักหมุด</b></h4>
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">แก้ไข</a>
+        <div class="col-md-5 pt-3" style="justify-content: right;">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle name" style="font-size: x-large; font-weight: bold;"type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        จัดการปักหมุด
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color:#fff2ccff ;">
+                        <a class="dropdown-item name" href="#">แก้ไข</a>
+                    </div>
                 </div>
-            </div>
         </div>
     </div>
     <% if (messages.success) { %>

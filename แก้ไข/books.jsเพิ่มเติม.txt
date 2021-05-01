@@ -1,0 +1,19 @@
+//เพิ่มรายละเอียดนิยาย
+router.get('/detailEbooks', function (req, res, next) {
+    // render to detailEbook.ejs
+    res.render('books/detailEbook')
+})
+
+//เพิ่มรายละเอียดนิยาย
+router.post('/submitEbook', function (req, res, next) {
+    let id = req.body.title;
+    let price = req.body.price;
+
+    var form_data = { price: price }
+    dbConn.query('UPDATE books SET ? WHERE id =' + id, form_data, function (err, result) {
+        req.flash('success', 'Sales your Ebooks successful')
+        // render to /detailEbooks
+        res.redirect('/books/detailEbooks')
+    })
+
+})

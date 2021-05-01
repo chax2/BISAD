@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>จัดการนิยาย</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
+</head>
+<style>
+    .boxwhite {
+        margin-left: 150px;
+        padding: 10px 30px;
+    }
+
+    body {
+        font-family: 'Mali', cursive;
+    }
+
+    .headName {
+        font-family: 'Caveat Brush', cursive;
+        color: #61342d;
+        justify-content: center;
+        font-size: 2.3rem;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 107%;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    .search {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+
+    .headName {
+        font-family: 'Caveat Brush', cursive;
+        color: #61342d;
+        justify-content: center;
+        font-size: 2.3rem;
+    }
+
+    .name {
+        font-family: 'Mali', cursive;
+        color: #61342d;
+        text-align: right;
+    }
+
+    .img-icon {
+        width: 25px;
+        height: 25px;
+    }
+</style>
+
+<body style="background-color: #fffaf6ff;">
+    <nav class="navbar" style="background-color: #fec8c1ff;">
+        <div class="container-fluid">
+            <a class="navbar-brand headName" href="/books/home">
+                <img src="https://pngimage.net/wp-content/uploads/2018/06/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%AB%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%AA%E0%B8%B7%E0%B8%AD-png-3.png"
+                    width="60" height="60" alt="logo">
+                NOVEL WEB</a>
+            <a class="name" href="/books">ออกจากระบบ</a>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row no-gutter" style="background-color: #ffdcd8ff;">
+            <!--Navbar-->
+            <div class="col-3">
+                <input type="text" class="form-control search" placeholder="ตั้งชื่อเรื่อง">
+            </div>
+            <div class="col-5 search">
+                <select name="change-font" id="change-font" class="form-select search"
+                    aria-label="Default select example" onchange="changeFontStyle(this)">
+                    <option value="Comic Sans MS" selected="selected">Comic Sans MS</option>
+                    <option value="Georgia">Georgia</option>
+                </select>
+                <div class="btn-group" role="group" aria-label="Basic example" style="margin-left: 10px;">
+                    <button type="button" class="btn btn-light"><b>B</b></button>
+                    <button type="button" class="btn btn-light"><i>I</i></button>
+                    <button type="button" class="btn btn-light"><u>U</u></button>
+                    <button type="button" class="btn btn-light"><img
+                            src="https://cdn4.iconfinder.com/data/icons/email-2-2/32/Trash-Email-Bin-512.png"
+                            class="img-icon"></button>
+                    <button type="button" class="btn btn-light"><img
+                            src="https://cdn1.iconfinder.com/data/icons/education-2-40/32/Highlighter-512.png"
+                            class="img-icon"></button>
+                    <button type="button" class="btn btn-light"><img
+                            src="https://cdn3.iconfinder.com/data/icons/pixel-perfect-at-16px-volume-3-1/16/5044-512.png"
+                            class="img-icon"></button>
+                    <button type="button" class="btn btn-light"><img
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png"
+                            class="img-icon"></button>
+                    <button type="button" class="btn btn-light"><img
+                            src="https://cdn1.iconfinder.com/data/icons/feather-2/24/align-left-512.png"
+                            class="img-icon"></button>
+                    <button type="button" class="btn btn-light"><img
+                            src="https://cdn4.iconfinder.com/data/icons/feather/24/align-justify-512.png"
+                            class="img-icon"></button>
+                    <button type="button" class="btn btn-light"><img
+                            src="https://cdn1.iconfinder.com/data/icons/feather-2/24/align-right-512.png"
+                            class="img-icon"></button>
+                </div>
+            </div>
+            <div class="col search">
+                <button class="btn btn-light"><img
+                        src="https://cdn1.iconfinder.com/data/icons/image-processing/24/17-view-512.png"
+                        style="width: 30px;">ซ่อนเนื้อหา/เผยแพร่</button>
+                <button class="btn btn-light"><img src="https://cdn3.iconfinder.com/data/icons/glyph/227/Trash-512.png"
+                        style="width: 30px;">ลบนิยายเรื่องนี้</button>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+
+            <div class="row pt-3 pb-5">
+                <!--เขียนนิยาย-->
+                <textarea class="form-control" style="width: 100%x; height: 520px;" id="story" name="story"
+                    placeholder="แต่งนิยาย..."></textarea>
+            </div>
+            <div class="row footer">
+                <!-- ปุ่ม3ปุ่มข้างล่าง -->
+                <div class="col-2">
+                </div>
+                <div class="col-8">
+                    <a href="/books/detailEbooks" class="btn btn-outline-light btn-lg line" role="button"
+                        aria-pressed="true" style="background-color:gray">เพิ่มรายละเอียดนิยาย</a>
+                    <a href="/books/admit" class="btn btn-outline-light btn-lg line" role="button" aria-pressed="true"
+                        style="background-color:gray">ส่งนิยายตรวจสอบ</a>
+                    <a href="/books/check" class="btn btn-outline-light btn-lg line" role="button" aria-pressed="true"
+                        style="background-color:gray">ตรวจสอบปักหมุด</a>
+
+                </div>
+                <div class="col-2">
+                </div>
+            </div>
+        </div>
+        <script>
+            var changeFontStyle = function (font) {
+                document.getElementById(
+                    "story").style.fontFamily
+                    = font.value;
+            }
+        </script>
+</body>
+
+</html>

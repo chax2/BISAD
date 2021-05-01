@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+ืื
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>รายละเอียดการขายนิยาย</title>
+    <link rel="stylesheet" href="css/readNovel.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300&display=swap" rel="stylesheet">
+</head>
+<style>
+    .input {
+        display: flex;
+        align-items: center;
+        width: 700px;
+        height: 300px;
+        border: none;
+        border-radius: 5px;
+        background: #cfe2f3ff;
+    }
+
+    .input2 {
+        display: flex;
+        align-items: center;
+        width: 300px;
+        height: 175px;
+        border: 2px black;
+        border-radius: 5px;
+        background: #ffe8c9ff;
+        margin-left: -550px;
+    }
+
+    #submit {
+        width: 200px;
+        height: 50px;
+        background: #ffe8c9ff;
+        font-family: inherit;
+        font-weight: bold;
+        color: inherit;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        color: #61342d;
+
+    }
+
+    .button,
+    .input {
+        box-shadow:
+            0px 0px 0px 5px rgba(255, 255, 255, 0.4),
+            0px 4px 20px rgba(0, 0, 0, 0.33);
+    }
+
+    #select {
+        width: 100px;
+        height: 60px;
+
+    }
+
+    .date {
+        background: #ffe8c9ff;
+    }
+
+    .headName {
+        font-family: 'Caveat Brush', cursive;
+        color: #61342d;
+        justify-content: center;
+        font-size: 2.3rem;
+    }
+
+    .name {
+        font-family: 'Mali', cursive;
+        color: #61342d;
+        text-align: right;
+    }
+</style>
+
+<body>
+    <%- include('nav') -%>
+        <% if (messages.success) { %>
+            <div class="alert alert-success" role="alert">
+                <%- messages.success %>
+            </div>
+            <% } %>
+
+                <div class="row no-gutters pb-3 justify-content-left">
+                    <div class="header">
+                        <h3 style="margin-left: 20px; margin-top: 20px;">รายละเอียดการขายนิยาย</h3>
+                    </div>
+                </div>
+                <form action="/books/submitEbook" method="post">
+                    <!---->
+                    <div class="row" style="margin-left: 360px;">
+                        <!--การ์ด1--->
+                        <div class="card"
+                            style="width: 900px; height: 300px; background-color: white; margin-left: -200px; ">
+                            <div class="card-body">
+
+                                <div class="form-group row">
+                                    <label for="staticEmail" style="font-size: 20px;"
+                                        class="col-sm-2 col-form-label">ชื่อนิยาย
+                                        :
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control form-select-lg mt-2" id="title" name="title"
+                                            style=" width: 300px;">
+                                            <option selected>-- ระบุ ชื่อนิยาย --</option>
+                                            <option value="4">To every me who I remember</option>
+                                            <option value="6">Engineer Cute Boy:)</option>
+                                            <option value="7">ฮัสกี้หน้าโง่กับอาจารย์เหมียวขาวของเขา</option>
+                                            <option value="8">ภาวะรักซ้อน</option>
+                                            <option value="9">ฝันรักในเงาเมฆ</option>
+                                            <option value="10">The Drakers Story</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticEmail" style="font-size: 20px;"
+                                        class="col-sm-2 col-form-label">จำนวนตอน:
+                                    </label>
+                                    <input class="form-control" style="width: 200px;" type="text" id="ep" name="ep">
+                                </div>
+                                <div class="form-group row">
+                                    <label style="font-size: 20px;" class="col-sm-2 col-form-label">เรื่องย่อ:
+                                    </label>
+                                    <input class="form-control" style="width: 200px;" type="text" id="brief"
+                                        name="brief">
+                                </div>
+                                <div class="form-group row">
+                                    <label style="font-size: 20px;" class="col-sm-2 col-form-label" id="brief"
+                                        name="brief">ราคา:
+                                    </label>
+                                    <input class="form-control" style="width: 200px;" type="text" id="price"
+                                        name="price">
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-2 pt-3" style="margin-top: 50px"></div>
+                    </div>
+                    <!-- ปุ่มสมัครสมาชิก -->
+                    <div class="row no-gutters pt-3 pb-3 justify-content-center"
+                        style="width: 400px; margin-left: 250px; margin-top:px;">
+                        <input type="submit" class="button" id="submit" value="ขาย e-book"
+                            style="width: 320px; margin-left: 350px;">
+                    </div>
+                </form>
+
+</body>
+
+</html>
